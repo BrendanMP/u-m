@@ -11,5 +11,5 @@ Site.add({
 	locations: { type: Types.Relationship, ref: 'Location', many: true },
 });
 
-Site.defaultColumns = 'name, client, locations, menus';
+Site.defaultColumns = 'name, client, locations';
 Site.register();
