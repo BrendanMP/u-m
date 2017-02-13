@@ -8,7 +8,7 @@ Site.add({
 	editors: { type: Types.Relationship, ref: 'User', many: true },
 	name: { type: String, required: true, index: true },
 	url: { type: String, index: true },
-	locations: { type: Types.Relationship, ref: 'Location', many: true },
+	locations: { type: Types.Relationship, ref: 'Site', many: true },
 });
 
 Site.defaultColumns = 'name, admin, editors, locations';

@@ -4,7 +4,7 @@ var Types = keystone.Field.Types;
 var Location = new keystone.List('Location');
 
 Location.add({
-	site: { type: Types.Relationship, ref: 'Location'},
+	site: { type: Types.Relationship, ref: 'Site'},
 	name: { type: String, required: true, index: true },
 	address: { type: Types.Location, index: true },
 });
