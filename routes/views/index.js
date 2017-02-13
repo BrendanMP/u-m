@@ -5,7 +5,7 @@ const Site = keystone.list('Site');
 exports = module.exports = function(req, res) {
 
   let view = new keystone.View(req, res);
-  let locals = res.locals;
+  let { locals } = res;
 
   // locals.section is used to set the currently selected
   // item in the header navigation.
@@ -26,6 +26,6 @@ exports = module.exports = function(req, res) {
     .then(function(user) {
       locals.current = user;
       return view.render('index');
-    })
+    });
 
 };
