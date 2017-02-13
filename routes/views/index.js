@@ -2,7 +2,7 @@ const keystone = require('keystone');
 const User = keystone.list('User');
 const Site = keystone.list('Site');
 
-exports = module.exports = function(req, res) {
+exports = module.exports = (req, res) => {
 
   let view = new keystone.View(req, res);
   let { locals } = res;
@@ -23,7 +23,7 @@ exports = module.exports = function(req, res) {
       }
     })
     .exec()
-    .then(function(user) {
+    .then((user) => {
       locals.current = user;
       return view.render('index');
     });
